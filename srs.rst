@@ -119,3 +119,37 @@ Analysing the log data to find whether the student is gaming the system or not i
 ================================
 
 EdX-data analyzer assumes that log entries genrated by the EdX ITS server are error free. As only source of input to EdX-data analyzer is data provided by EdX ITS server. EdX-data analyzer totally depends on the EdX ITS for the data.
+
+=========================
+**Specific Requirements**
+=========================
+
+3.1 External Interface Requirements:
+3.1.1 Hardware Requirements:
+1.
+
+===========================
+**Functional Requirements**
+===========================
+
+1. The system shall analyse the data based on various parameters of the student such as location,age group,gender etc.
+2. The instructor shall be able to choose the comparison parameters and input valid entries to be queried. The instructor shall be able to input the subject for the data to be queried.
+3. The data shall be represented in visual format to be understood by the instructor. The visuals formats may include pie-charts,bar charts, line charts etc.
+4. The system shall parse the log data and store the parsed data into relevant event related tables.
+5. The system shall extract the relevant and useful data from the parsed data.
+6. The system shall tell whether a student is gaming a system or not. The system shall do this after analysing the various actions performed by the student while giving the test.
+
+============================
+**Performance Requirements**
+============================
+
+1.The edx analytics shall support in courses having large number of students (in thousands).
+There shall be minimal delay in retrieving the data.
+2.The analysis shall be done on the data which has not been processed,i.e,only new data shall be considered for analysis.
+This would avoid the reading of unneccesary data again and again. This would be called as incremental implementation of queries.
+
+==============================
+**Non Functional Requirments**
+==============================
+
+1.The visual diagrams displaying the analysis with various parameters of the student shall be in a easy form so as to be understood by each and every instructor including those belonging to non-mathematical back-ground.
