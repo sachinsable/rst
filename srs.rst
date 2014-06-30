@@ -93,3 +93,29 @@ Secondly, data analytics also involves a thorough study of the database containi
 ==========
 
 Implementing the ideas described above will make the tutoring system very efficient while grading a student. Any normal ITS, without any provisions for detection of a student who is gaming and implementing interventions in their system, will award a certificate to any student who has completed the course. But this would make a system very incompetent in correctly grading an undeserving student. Thus our idealogies would aid the ITS in fairly classifying the students into gaming and not gaming and accrordingly award the certificates to the deserving students. In addition, the tutoring system will be able to pick out the 'gaming' students and interevene their learning process so that their learning skills also match the regular students' learning, thereby widening the scope of the efficiency of the edX course site.
+
+=======================
+**Overall description**
+=======================
+
+EdX-data analyzer uses data genreated by edX  in the form of log entries and the database it creates. Data containing information related to the students is stored in the database 'edxapp'. Data from  edxapp is used for analysis purposes like number of dropouts according to education level, location, gender, number of students according to their eduation level enrolled in a particular course. 
+Log entries genrated by the server will help us to find if the student is gaming the system or not. EdX-data analyzer will constantly look for the new entries  in the log files and parse, process  them to find wheather students are gaming or not.
+EdX-data analyzer parses the log file entries and stores them using hive on hadoop  distributed file system.
+
+=====================
+**Product Functions**
+=====================
+
+EdX-data analyzer serves main purpose of determining wheather the student is gaming the system or not. It can be used to interrupt the student who are tring to game the system and adjust the tutor system such that it will be difficult for the student to game the system.
+
+===============
+**Constraints**
+===============
+
+Analysing the log data to find whether the student is gaming the system or not involves many constriants like diffculties in predicting the state of mind of person by just looking at it's interaction with the system. It is not possible to determine if a student is sleeping while watching the video or whether a student is paying proper attention. Along with difficulties in predicting the state of mind of the student, it is also not possible to note down each and every action or interaction of the user with his/her system due to privacy policies. Instance of this diffcutly can be a situation for example, a student who pauses the video might be pausing the video and indulging in the other off task behavior or a student might be getting confused while watching the video and now try to understand the concept over the internet. As seen in the example, it is difficult to predict the extact state mind of the student. To determine whether the student is gaming or not, detailed analysis is required. Even if we are able to determine whether the student is gaming or not,  we need to take some action to prevent the student from the gaming. But, question is how to determine which steps should be taken to stop the student from gaming as it will depend on the reason behind the gaming which is a furture part of analysis not covered here.
+
+================================
+**Assumptions and Dependancies**
+================================
+
+EdX-data analyzer assumes that log entries genrated by the EdX ITS server are error free. As only source of input to EdX-data analyzer is data provided by EdX ITS server. EdX-data analyzer totally depends on the EdX ITS for the data.
