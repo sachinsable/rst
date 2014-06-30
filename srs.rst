@@ -143,13 +143,13 @@ EdX-data analyzer assumes that log entries genrated by the EdX ITS server are er
 **Performance Requirements**
 ============================
 
-1.The edx analytics shall support in courses having large number of students (in thousands).
+1. The edx analytics shall support in courses having large number of students (in thousands).
 There shall be minimal delay in retrieving the data.
-2.The analysis shall be done on the data which has not been processed,i.e,only new data shall be considered for analysis.
+2. The analysis shall be done on the data which has not been processed,i.e,only new data shall be considered for analysis.
 This would avoid the reading of unneccesary data again and again. This would be called as incremental implementation of queries.
 
 ==============================
 **Non Functional Requirments**
 ==============================
 
-1.The visual diagrams displaying the analysis with various parameters of the student shall be in a easy form so as to be understood by each and every instructor including those belonging to non-mathematical back-ground.
+1. The visual diagrams displaying the analysis with various parameters of the student shall be in a easy form so as to be understood by each and every instructor including those belonging to non-mathematical back-ground.
