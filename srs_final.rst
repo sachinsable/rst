@@ -19,6 +19,7 @@ interns comfortable and for all their administrative help.
 Finally we also like to thank all other colleagues working in different projects under Prof.
 Phatak for helping us at small problems as well as critical junctures.
 
+----------------
 **Team Members**
 ----------------
 
@@ -46,9 +47,9 @@ Oshin Prem
 
  osh.yen26@gmail.com
 
- 
+-----------
 **Mentors**
-------------
+-----------
 
 Mr. Parag Tiwari-Project Manager at IITB
 
@@ -1017,7 +1018,7 @@ DATA VISUALISATION
 
 
 Hive Queries
-************
+------------
 
 Following are the Hive queries used for data extraction from Hive database.
 
@@ -1296,7 +1297,7 @@ Following are the Hive queries used for data extraction from Hive database.
 
 
 Java Code
-*********
+---------
 
 We have written Java code for merging the output from the above hive queries in formatted csv (comma separated values)
 file. Following is a snippet for the same.
@@ -1560,7 +1561,7 @@ Code snipet of java program calculating distribution of drop-outs according to a
 
 
 Generating charts from CSV files
-********************************
+--------------------------------
 
 Generating interactive charts using Highcharts library.
 
@@ -1652,7 +1653,7 @@ Generating interactive charts using Highcharts library.
 
 
 Examples of generated-Charts
-****************************
+----------------------------
 
 Below are the charts that we have generated.
 
