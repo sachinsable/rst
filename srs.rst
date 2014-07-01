@@ -127,6 +127,34 @@ EdX-data analyzer assumes that log entries genrated by the EdX ITS server are er
 3.1 External Interface Requirements:
 3.1.1 Hardware Requirements:
 1.
+======================
+**Technologies used:**
+======================
+
+1. Hadoop:
+----------
+
+Apache Hadoop is an open source software project that enables the distributed processing of large data sets across clusters of commodity servers. It is designed to scale up from a single server to thousands of machines, with a very high degree of fault tolerance. Rather than relying on high-end hardware, the resiliency of these clusters comes from the software’s ability to detect and handle failures at the application layer.
+
+Apache Hadoop has two main subprojects:
+
+    MapReduce - The framework that understands and assigns work to the nodes in a cluster.
+    HDFS - A file system that spans all the nodes in a Hadoop cluster for data storage. It links together the file systems on many local nodes to make them into one big file system. HDFS assumes nodes will fail, so it achieves reliability by replicating data across multiple nodes
+
+2. Hive:
+--------
+
+
+Hive is a runtime Hadoop support structure that allows anyone who is already fluent with SQL (which is commonplace for relational data-base developers) to leverage the Hadoop platform right out of the gate. 
+Hive allows SQL developers to write Hive Query Language (HQL) statements that are similar to standard SQL statements. HQL is limited in the commands it understands, but it is still useful. HQL statements are broken down by the Hive service into MapReduce jobs and executed across a Hadoop cluster.
+
+
+
+3. Sqoop:
+---------
+
+Sqoop is a command-line interface application for transferring data between relational databases and Hadoop. It supports incremental loads of a single table or a free form SQL query as well as saved jobs which can be run multiple times to import updates made to a database since the last import. Imports can also be used to populate tables in Hive or HBase. Exports can be used to put data from Hadoop into a relational database. 
+
 
 ===========================
 **Functional Requirements**
@@ -143,10 +171,8 @@ EdX-data analyzer assumes that log entries genrated by the EdX ITS server are er
 **Performance Requirements**
 ============================
 
-1. The edx analytics shall support in courses having large number of students (in thousands).
-There shall be minimal delay in retrieving the data.
-2. The analysis shall be done on the data which has not been processed,i.e,only new data shall be considered for analysis.
-This would avoid the reading of unneccesary data again and again. This would be called as incremental implementation of queries.
+1. The edx analytics shall support in courses having large number of students (in thousands). There shall be minimal delay in retrieving the data.
+2. The analysis shall be done on the data which has not been processed,i.e,only new data shall be considered for analysis. This would avoid the reading of unneccesary data again and again. This would be called as incremental implementation of queries.
 
 ==============================
 **Non Functional Requirments**
